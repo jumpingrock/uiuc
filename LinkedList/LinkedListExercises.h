@@ -81,19 +81,22 @@
 template <typename T>
 void LinkedList<T>::insertOrdered(const T& newData) {
   LinkedList::Node *thru = head_;
+  // std::cout << "startttttttttttttt"<< "/n";
+  std::cout << "newData:          " << newData << "/n";
   while(newData > 0 && thru->next != nullptr){
     std::cout << thru->next;
     LinkedList<int>::Node abc = *thru->next;
-
-    if(abc >= newData || thru->next == nullptr){ //if thru->data > newData then insert data into linklist
-      // std::cout << "hellooooo";
-      // thru = thru->next;
-      // thru->data = newData;
-      // thru->prev = 
+    std::cout << thru->data;
+    // if(abc >= newData || thru->next == nullptr){ 
+    //   //if thru->data > newData then insert data into linklist
+    //   // std::cout << "hellooooo";
+    //   // thru = thru->next;
+    //   // thru->data = newData;
+    //   // thru->prev = 
       
-    }else {
-      std::cout << "goodbyeeeeeee";
-    }
+    // }else {
+    //   std::cout << "goodbyeeeeeee";
+    // }
     thru = thru->next;
   }
   
